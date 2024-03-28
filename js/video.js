@@ -59,14 +59,19 @@ document.querySelector("#mute").addEventListener("click", function() {
 });
 
 
+
 document.querySelector("#volumeSlider").addEventListener("input", function() {
-	video.volume = this.value / 100;
-	console.log("Volume:", video.volume);
+    var volume = this.value;
+    video.volume = volume / 100;
+    document.querySelector("#volume").textContent = volume + "%"; // Ensure this selector matches the element in your HTML
+    console.log("Volume:", video.volume);
 });
+
 
 
 document.querySelector("#vintage").addEventListener("click", function() {
     video.classList.toggle("oldSchool");
+    console.log("Style toggled: ", video.classList.contains("oldSchool"));
 });
 
 
