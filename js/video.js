@@ -70,9 +70,9 @@ document.querySelector("#slider").addEventListener("input", function() {
 
 
 document.querySelector("#vintage").addEventListener("click", function() {
-    var videoElement = document.querySelector("#player1");
-    videoElement.classList.toggle("oldSchool");
-    console.log("Style toggled: ", videoElement.classList.contains("oldSchool"));
+
+    video.classList.toggle("oldSchool");
+    console.log("Style toggled: ", video.classList.contains("oldSchool"));
 });
 
 
