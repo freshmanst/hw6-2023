@@ -1,12 +1,14 @@
 var video;
 
 window.addEventListener("load", function() {
-	console.log("Good job opening the window")
+	console.log("Good job opening the window");
 
-	video = document.querySelector("video");
-
+    video = document.querySelector("#player1");
     video.autoplay = false;
     video.loop = false;
+
+    video.volume = 1; 
+    document.querySelector("#volume").textContent = (video.volume * 100) + "%";
 
     console.log("Video initialized, autoplay and looping turned off");
 });
@@ -61,6 +63,7 @@ document.querySelector("#mute").addEventListener("click", function() {
 
 
 document.querySelector("#slider").addEventListener("input", function() {
+	
     var volume = this.value;
     video.volume = volume / 100;
     document.querySelector("#volume").textContent = volume + "%"; 
