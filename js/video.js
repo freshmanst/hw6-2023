@@ -60,18 +60,19 @@ document.querySelector("#mute").addEventListener("click", function() {
 
 
 
-document.querySelector("#volumeSlider").addEventListener("input", function() {
+document.querySelector("#slider").addEventListener("input", function() {
     var volume = this.value;
     video.volume = volume / 100;
-    document.querySelector("#volume").textContent = volume + "%"; // Ensure this selector matches the element in your HTML
+    document.querySelector("#volume").textContent = volume + "%"; 
     console.log("Volume:", video.volume);
 });
 
 
 
 document.querySelector("#vintage").addEventListener("click", function() {
-    video.classList.toggle("oldSchool");
-    console.log("Style toggled: ", video.classList.contains("oldSchool"));
+    var videoElement = document.querySelector("#player1");
+    videoElement.classList.toggle("oldSchool");
+    console.log("Style toggled: ", videoElement.classList.contains("oldSchool"));
 });
 
 
