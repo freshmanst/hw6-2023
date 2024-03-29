@@ -1,4 +1,4 @@
-var video;
+let video;
 
 window.addEventListener("load", function() {
 	console.log("Good job opening the window");
@@ -78,10 +78,17 @@ document.querySelector("#slider").addEventListener("input", function() {
 document.querySelector("#vintage").addEventListener("click", function() {
 
     if (video.classList.contains("oldSchool")) {
-		video.classList.remove("oldSchool");
 	} else {
 		video.classList.add("oldSchool");
 	}
+    console.log("Style toggled: ", video.classList.contains("oldSchool"));
+});
+
+document.querySelector("#orig").addEventListener("click", function() {
+
+    if (video.classList.contains("oldSchool")) {
+		video.classList.remove("oldSchool");
+	} 
     console.log("Style toggled: ", video.classList.contains("oldSchool"));
 });
 
