@@ -7,7 +7,7 @@ window.addEventListener("load", function() {
     video.autoplay = false;
     video.loop = false;
 
-    video.volume = 1; 
+
     document.querySelector("#volume").textContent = (video.volume * 100) + "%";
 
     console.log("Video initialized, autoplay and looping turned off");
@@ -17,6 +17,7 @@ window.addEventListener("load", function() {
 document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
 	video.play();
+	video.volume = 1; 
     console.log("Volume:", video.volume);
 });
 
@@ -75,6 +76,7 @@ document.querySelector("#slider").addEventListener("input", function() {
 document.querySelector("#vintage").addEventListener("click", function() {
 
     video.classList.toggle("oldSchool");
+	video.classList.toggle("oldSchool");
     console.log("Style toggled: ", video.classList.contains("oldSchool"));
 });
 
