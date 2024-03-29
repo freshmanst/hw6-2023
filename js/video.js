@@ -76,7 +76,6 @@ document.querySelector("#slider").addEventListener("input", function() {
 document.querySelector("#vintage").addEventListener("click", function() {
 
     video.classList.toggle("oldSchool");
-	video.classList.toggle("oldSchool");
     console.log("Style toggled: ", video.classList.contains("oldSchool"));
 });
 
