@@ -8,16 +8,18 @@ window.addEventListener("load", function() {
     video.loop = false;
 
 
-    document.querySelector("#volume").textContent = (video.volume * 100) + "%";
 
-    console.log("Video initialized, autoplay and looping turned off");
+    
+
+    console.log("Video initialized");
 });
 
 
 document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
 	video.play();
-	video.volume = 1; 
+	// video.volume = 1; 
+	document.querySelector("#volume").textContent = (video.volume * 100) + "%";
     console.log("Volume:", video.volume);
 });
 
@@ -75,7 +77,11 @@ document.querySelector("#slider").addEventListener("input", function() {
 
 document.querySelector("#vintage").addEventListener("click", function() {
 
-    video.classList.toggle("oldSchool");
+    if (video.classList.contains("oldSchool")) {
+		video.classList.remove("oldSchool");
+	} else {
+		video.classList.add("oldSchool");
+	}
     console.log("Style toggled: ", video.classList.contains("oldSchool"));
 });
 
